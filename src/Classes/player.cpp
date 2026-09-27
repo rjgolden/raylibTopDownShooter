@@ -113,9 +113,9 @@ void Player::handleControllerMovement(){
         m_positionX -= m_playerSpeed;
     }
     else if (IsGamepadButtonDown(0, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)) {
-            m_idle = false;
-            m_state = RIGHT;
-            m_positionX += m_playerSpeed;
+        m_idle = false;
+        m_state = RIGHT;
+        m_positionX += m_playerSpeed;
     }
     if (IsGamepadButtonDown(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
         m_idle = false;

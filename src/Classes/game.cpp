@@ -116,7 +116,7 @@ void Game::runGame(){
             if(enemy.getHealth() <= 0.0f){
                 enemiesKilled++;
                 particles.explode(enemy.getPosition(), RED, rand() % particles.m_particleTextures.size());
-                enemy.setHealth(20.0f); 
+                enemy.setHealth(100.0f); 
                 enemy.setPositionRandom();
             }
             checkEnemyCollisions(enemies, m_deltaTime);
@@ -145,13 +145,13 @@ void Game::runGame(){
                 playerAnimation.updateSprite();
                 for(Enemy &enemy : enemies){
                     enemy.updateSprite();
-                    enemy.chasePlayer(playerAnimation.getPosition());
+                    //enemy.chasePlayer(playerAnimation.getPosition());
                 }
                 particles.updateParticles();
             EndMode2D();
 
             BeginBlendMode(BLEND_MULTIPLIED); 
-                DrawTextureRec(lightMap.texture, Rectangle{0.0f, 0.0f, static_cast<float>(lightMap.texture.width), static_cast<float>(lightMap.texture.height)}, Vector2{0, 0}, RAYWHITE);
+                DrawTextureRec(lightMap.texture, Rectangle{0.0f, 0.0f, static_cast<float>(lightMap.texture.width), -static_cast<float>(lightMap.texture.height)}, Vector2{0, 0}, RAYWHITE);
             EndBlendMode(); 
         EndTextureMode();
 
