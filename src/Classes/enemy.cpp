@@ -79,7 +79,7 @@ void Enemy::updateSprite(){
     else{
         animateSprite();
         drawSprite();
-        drawCircle();
+        //drawCircle();
     }
     drawHealthBar();
 }

@@ -47,7 +47,7 @@ void Game::runGame(){
     
     // enemies
     std::array<Enemy, 10> enemies;
-    for(int i{0}; i<10; i++){
+    for(int i{0}; i<2; i++){
         enemies[i] = (Enemy(Assets::enemy, 6));
     }
 
@@ -119,7 +119,7 @@ void Game::runGame(){
                 enemy.setHealth(100.0f); 
                 enemy.setPositionRandom();
             }
-            checkEnemyCollisions(enemies, m_deltaTime);
+            //checkEnemyCollisions(enemies, m_deltaTime);
         }
         
         // where light is drawn to screen
